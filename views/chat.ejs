@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Socket.IO chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <ul class="notifications"></ul>
+  
+  <div class="wrapper">
+    <section class="chat-area">
+      <header>
+        <div class="details">
+          <span id="uname">username</span>
+        </div>
+        <div class="menu-container">
+          <input type="checkbox" class="hide" id="menu-toggle">
+          <label for="menu-toggle" class="menu-button">
+            <span class="menu-icon"></span>
+          </label>
+          <ul style="z-index: 999;" class="menu-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </header>
+      <div class="chat-box" id="chat-box">
+      </div>
+      <div class="pos">
+        <form id="send-form" class="typing-area">
+          <input type="text" placeholder="Type a message here..." autocomplete="off" id="message-input">
+          <button id="send">Send <i class="fab fa-telegram-plane"></i></button>
+        </form>
+      </div>
+    </section>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
